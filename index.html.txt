@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anastasia Lerman | Opera Singer</title>
+    <style>
+        /* --- CSS STYLES --- */
+        :root {
+            --primary-color: #1a1a1a; /* Dark background */
+            --accent-color: #c5a059; /* Gold for elegance */
+            --text-color: #f0f0f0;
+            --secondary-text: #b0b0b0;
+            --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            --font-serif: 'Georgia', serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: var(--font-main);
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            font-family: var(--font-serif);
+            font-weight: normal;
+            margin: 0;
+        }
+
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        a:hover { color: var(--accent-color); }
+
+        /* Header & Hero */
+        header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/photo5.jpg'); /* Replace with actual hero image path */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            font-family: var(--font-main);
+            letter-spacing: 1px;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(26, 26, 26, 0.95);
+            padding: 15px 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            flex-wrap: wrap;
+        }
+
+        nav li { margin: 0 20px; }
+        nav a { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* Sections General */
+        section {
+            padding: 80px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: var(--accent-color);
+        }
+
+        /* About Section */
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+        }
+        .about-text { flex: 1; text-align: justify; }
+        .about-image { 
+            flex: 1; 
+            min-width: 300px;
+            height: 400px;
+            background-color: #333; /* Placeholder color */
+            background-image: url('images/photo3.jpg'); /* Replace image */
+            background-size: cover;
+            background-position: center;
+            border: 1px solid var(--accent-color);
+        }
+
+        /* Photos Grid */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        .photo-item {
+            height: 300px;
+            background-color: #2a2a2a;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.8;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .photo-item:hover { opacity: 1; transform: scale(1.02); }
+
+        /* Performances Table */
+.schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .schedule-table th, .schedule-table td {
+            text-align: left;
+            padding: 15px;
+            border-bottom: 1px solid #444;
+        }
+        .schedule-table th { color: var(--accent-color); }
+        .schedule-table tr:hover { background-color: #252525; }
+        .role { font-weight: bold; }
+        .location { color: var(--secondary-text); font-size: 0.9em; }
+
+        /* Videos */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            background: #000;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Contact */
+        .contact-box {
+            background: #252525;
+            padding: 40px;
+            text-align: center;
+            border: 1px solid #444;
+        }
+        .contact-box h3 { color: var(--accent-color); margin-bottom: 20px; }
+        .social-links { margin-top: 20px; font-size: 1.5rem; }
+        .social-links a { margin: 0 10px; }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #111;
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 50px;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2.5rem; }
+            .about-content { flex-direction: column; }
+            nav li { margin: 5px 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#photos">Photos</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#performances">Schedule</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1 class="hero-title">Anastasia Lerman</h1>
+        <div class="hero-subtitle">Soprano</div>
+    </header>
+
+    <section id="about">
+        <h2 class="section-title">About</h2>
+        <div class="about-content">
+            <div class="about-image">
+                </div>
+            <div class="about-text">
+                <p>
+                    Russian soprano <strong>Anastasia Lerman</strong> is a rising star in the opera world, celebrated for her lyrical expressiveness and stage presence.
+                </p>
+                <p>
+                    From the 2023/24 season, she has been a member of the ensemble at the <strong>Tiroler Landestheater Innsbruck</strong>. Her repertoire includes iconic roles such as Susanna in Mozart's <em>Le nozze di Figaro</em>, Musetta in Puccini's <em>La bohème</em>, and Xenia in Mussorgsky's <em>Boris Godunov</em>.
+                </p>
+                <p>
+                    Anastasia has previously graced the stages of the legendary <strong>Bolshoi Theater</strong> and <strong>Mariinsky Theater</strong>. In 2024, she was awarded the "1er Prix Femme – Opéra" at the 36th International Singing Competition in Marmande.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="performances">
+        <h2 class="section-title">Upcoming Performances</h2>
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Production</th>
+                    <th>Role</th>
+                    <th>Venue</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Feb - May 2025</td>
+                    <td>La clemenza di Tito (Mozart)</td>
+                    <td class="role">Vitellia</td>
+<td class="location">Tiroler Landestheater Innsbruck</td>
+                </tr>
+                <tr>
+                    <td>May - Jun 2025</td>
+                    <td>Pagliacci / Von Heute Auf Morgen</td>
+                    <td class="role">Die Freundin</td>
+                    <td class="location">Tiroler Landestheater Innsbruck</td>
+                </tr>
+                <tr>
+                    <td>Sep - Dec 2025</td>
+                    <td>Ariadne auf Naxos (Strauss)</td>
+                    <td class="role">Echo</td>
+                    <td class="location">Tiroler Landestheater Innsbruck</td>
+                </tr>
+                <tr>
+                    <td>Nov 2025 - Jan 2026</td>
+                    <td>The Excursions of Mr. Brouček (Janáček)</td>
+                    <td class="role">Child Prodigy</td>
+                    <td class="location">Tiroler Landestheater Innsbruck</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="photos">
+        <h2 class="section-title">Photos</h2>
+        <div class="gallery">
+            <div class="photo-item" style="background-image: url('images/photo1.jpg');"></div>
+            <div class="photo-item" style="background-image: url('images/photo2.jpg');"></div>
+            <div class="photo-item" style="background-image: url('images/photo6.jpg');"></div>
+            <div class="photo-item" style="background-image: url('images/photo4.jpg');"></div>
+        </div>
+    </section>
+
+    <section id="videos">
+        <h2 class="section-title">Videos</h2>
+        <div class="video-grid">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/Lum79p-NF2o" title="Roméo et Juliette" allowfullscreen></iframe>
+            </div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/XwlSlbpzcl0" title="Anastasia Lerman" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Connecting Information</h2>
+        <div class="contact-box">
+            <h3>Management & Booking</h3>
+            <p><strong>Artista International</strong></p>
+            <br>
+            
+            <h3>Direct Contact</h3>
+            <p>Email: <a href="mailto:anastasia.lermann@gmail.com">anastasia.lermann@gmail.com</a></p>
+            <p>Phone: <a href="tel:+4367761834798">+43 677 61834798</a></p>
+            
+            <div class="social-links">
+                <a href="https://www.operabase.com/anastasia-lerman-a105721/en" target="_blank" title="Operabase">🌐</a>
+                
+                <a href="https://www.instagram.com/anastasia_lerman_soprano/" target="_blank" title="Instagram">📷</a>
+                
+                <a href="https://www.youtube.com/@anastasial893" target="_blank" title="YouTube">▶️</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 Anastasia Lerman. All rights reserved. Design by AI.
+    </footer>
+
+</body>
+</html>
