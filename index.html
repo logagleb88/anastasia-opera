@@ -1,11 +1,59 @@
-<p>She has previously performed on the historic stages of the <strong>Bolshoi</strong> and <strong>Mariinsky</strong> theaters, establishing herself as a compelling voice in the opera world.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anastasia Lerman | Soprano</title>
+    <style>
+        :root { --accent: #c5a059; --bg: #1a1a1a; --text: #f0f0f0; }
+        body { margin: 0; font-family: 'Helvetica Neue', Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; scroll-behavior: smooth; }
+        nav { position: fixed; width: 100%; background: rgba(0,0,0,0.9); padding: 15px 0; z-index: 100; text-align: center; border-bottom: 1px solid #333; }
+        nav a { margin: 0 15px; color: white; text-decoration: none; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
+        header { 
+            height: 100vh; 
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/photo1.jpg'); 
+            background-size: cover; background-position: center; 
+            display: flex; flex-direction: column; justify-content: center; align-items: center; 
+        }
+        h1 { font-size: 3.5rem; border-bottom: 2px solid var(--accent); margin-bottom: 10px; text-align: center; font-weight: 300; }
+        section { padding: 100px 20px; max-width: 1100px; margin: 0 auto; }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+        .about-img { height: 500px; background: url('images/photo2.jpg') center/cover; border: 1px solid var(--accent); }
+        .photo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; }
+        .photo-item { height: 400px; background-size: cover; background-position: center; border: 1px solid #333; transition: 0.4s; }
+        .photo-item:hover { border-color: var(--accent); transform: translateY(-5px); }
+        .contact-box { background: #222; padding: 60px 20px; text-align: center; border: 1px solid var(--accent); }
+        a { color: var(--accent); text-decoration: none; transition: 0.3s; }
+        a:hover { color: white; }
+        @media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; } h1 { font-size: 2.5rem; } }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#photos">Photos</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <header>
+        <h1>Anastasia Lerman</h1>
+        <p>Soprano | Tiroler Landestheater Innsbruck</p>
+    </header>
+
+    <section id="about">
+        <div class="about-grid">
+            <div>
+                <h2 style="color:var(--accent); text-transform: uppercase;">About</h2>
+                <p>Anastasia Lerman is a Russian soprano and a soloist at the <strong>Tiroler Landestheater Innsbruck</strong>.</p>
+                <p>Her repertoire includes iconic roles such as Susanna in <em>Le nozze di Figaro</em>, Musetta in <em>La bohème</em>, and Vitellia in <em>La clemenza di Tito</em>.</p>
+                <p>She has previously performed on the historic stages of the <strong>Bolshoi</strong> and <strong>Mariinsky</strong> theaters, establishing herself as a compelling voice in the opera world.</p>
             </div>
             <div class="about-img"></div>
         </div>
     </section>
 
     <section id="photos">
-        <h2>Gallery</h2>
+        <h2 style="text-align:center; color:var(--accent); margin-bottom: 40px; text-transform: uppercase;">Gallery</h2>
         <div class="photo-grid">
             <div class="photo-item" style="background-image: url('images/photo1.jpg');"></div>
             <div class="photo-item" style="background-image: url('images/photo2.jpg');"></div>
@@ -18,21 +66,18 @@
 
     <section id="contact">
         <div class="contact-box">
-            <h2>Contact</h2>
-            <a href="mailto:anastasia.lermann@gmail.com">anastasia.lermann@gmail.com</a>
-            <a href="tel:+4367761834798">+43 677 61834798</a>
-            
-            <div class="socials">
-                <a href="https://www.youtube.com/@anastasial893" target="_blank">YouTube</a>
-                <a href="https://www.instagram.com/anastasia_lerman_soprano/" target="_blank">Instagram</a>
+                    <h2 style="text-transform: uppercase;">Contact</h2>
+            <p>Email: <a href="mailto:anastasia.lermann@gmail.com">anastasia.lermann@gmail.com</a></p>
+            <p>Phone: <a href="tel:+4367761834798">+43 677 61834798</a></p>
+            <div style="margin-top:30px;">
+                <a href="https://www.youtube.com/@anastasial893" target="_blank" style="margin: 0 15px; border: 1px solid var(--accent); padding: 10px 20px;">YouTube</a>
+                <a href="https://www.instagram.com/anastasia_lerman_soprano/" target="_blank" style="margin: 0 15px; border: 1px solid var(--accent); padding: 10px 20px;">Instagram</a>
             </div>
         </div>
     </section>
 
-    <footer>
+    <footer style="text-align:center; padding: 40px; font-size: 0.8rem; color: #666;">
         &copy; 2025 Anastasia Lerman. All rights reserved.
     </footer>
-
 </body>
 </html>
-
