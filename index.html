@@ -16,21 +16,25 @@
             display: flex; flex-direction: column; justify-content: center; align-items: center; 
         }
         h1 { font-size: 3.5rem; border-bottom: 2px solid var(--accent); margin-bottom: 10px; text-align: center; font-weight: 300; }
-        section { padding: 100px 20px; max-width: 1100px; margin: 0 auto; }
+        section { padding: 80px 20px; max-width: 1100px; margin: 0 auto; }
         .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
         .about-img { height: 500px; background: url('images/photo2.jpg') center/cover; border: 1px solid var(--accent); }
         .photo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; }
         .photo-item { height: 400px; background-size: cover; background-position: center; border: 1px solid #333; transition: 0.4s; }
-        .photo-item:hover { border-color: var(--accent); transform: translateY(-5px); }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; border: 1px solid var(--accent); }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        .perf-item { border-bottom: 1px solid #333; padding: 15px 0; display: flex; justify-content: space-between; }
+        .perf-date { color: var(--accent); font-weight: bold; min-width: 120px; }
         .contact-box { background: #222; padding: 60px 20px; text-align: center; border: 1px solid var(--accent); }
         a { color: var(--accent); text-decoration: none; transition: 0.3s; }
-        a:hover { color: white; }
-        @media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; } h1 { font-size: 2.5rem; } }
+        @media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; } .perf-item { flex-direction: column; } }
     </style>
 </head>
 <body>
     <nav>
         <a href="#about">About</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#video">Video</a>
         <a href="#photos">Photos</a>
         <a href="#contact">Contact</a>
     </nav>
@@ -46,9 +50,31 @@
                 <h2 style="color:var(--accent); text-transform: uppercase;">About</h2>
                 <p>Anastasia Lerman is a Russian soprano and a soloist at the <strong>Tiroler Landestheater Innsbruck</strong>.</p>
                 <p>Her repertoire includes iconic roles such as Susanna in <em>Le nozze di Figaro</em>, Musetta in <em>La bohème</em>, and Vitellia in <em>La clemenza di Tito</em>.</p>
-                <p>She has previously performed on the historic stages of the <strong>Bolshoi</strong> and <strong>Mariinsky</strong> theaters, establishing herself as a compelling voice in the opera world.</p>
             </div>
             <div class="about-img"></div>
+        </div>
+    </section>
+
+    <section id="schedule">
+        <h2 style="color:var(--accent); text-transform: uppercase;">Upcoming Performances</h2>
+        <div class="perf-item">
+            <span class="perf-date">Feb 2025</span>
+            <span><strong>Vitellia</strong> | La clemenza di Tito | Tiroler Landestheater</span>
+        </div>
+        <div class="perf-item">
+            <span class="perf-date">May 2025</span>
+            <span><strong>Susanna</strong> | Le nozze di Figaro | Tiroler Landestheater</span>
+        </div>
+        <div class="perf-item">
+            <span class="perf-date">Sep 2025</span>
+            <span><strong>Echo</strong> | Ariadne auf Naxos | Tiroler Landestheater</span>
+        </div>
+    </section>
+
+    <section id="video">
+        <h2 style="color:var(--accent); text-transform: uppercase; text-align: center;">Video</h2>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/Lum79p-NF2o" frameborder="0" allowfullscreen></iframe>
         </div>
     </section>
 
@@ -66,12 +92,12 @@
 
     <section id="contact">
         <div class="contact-box">
-                    <h2 style="text-transform: uppercase;">Contact</h2>
+            <h2 style="text-transform: uppercase;">Contact</h2>
             <p>Email: <a href="mailto:anastasia.lermann@gmail.com">anastasia.lermann@gmail.com</a></p>
             <p>Phone: <a href="tel:+4367761834798">+43 677 61834798</a></p>
             <div style="margin-top:30px;">
-                <a href="https://www.youtube.com/@anastasial893" target="_blank" style="margin: 0 15px; border: 1px solid var(--accent); padding: 10px 20px;">YouTube</a>
-                <a href="https://www.instagram.com/anastasia_lerman_soprano/" target="_blank" style="margin: 0 15px; border: 1px solid var(--accent); padding: 10px 20px;">Instagram</a>
+                <a href="https://www.youtube.com/@anastasial893" target="_blank" style="margin: 0 10px; border: 1px solid var(--accent); padding: 10px 15px;">YouTube</a>
+                <a href="https://www.instagram.com/anastasia_lerman_soprano/" target="_blank" style="margin: 0 10px; border: 1px solid var(--accent); padding: 10px 15px;">Instagram</a>
             </div>
         </div>
     </section>
